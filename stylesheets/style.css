@@ -1,0 +1,92 @@
+/*for desktops and laptops*/
+
+#me {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 40%;
+  -webkit-animation: diagonal-slide 1s forwards;
+  animation: diagonal-slide 1s forwards;
+}
+
+@-webkit-keyframes diagonal-slide {
+  0% {left: 0;top: 0; }
+  100% {left: 25px;top: -25px;}
+}
+
+@keyframes diagonal-slide {
+  0% {left: 0;top: 0; }
+  100% {left: 25px;top: -25px;}
+}
+
+body {
+  font-family: 'Archivo Narrow', sans-serif;
+  padding-top: 25px;
+}
+
+.text-container h1 {
+  font-size: 100px;
+  line-height: 90%;
+}
+
+.text-container h2 {
+  padding-bottom: 25px;
+}
+
+.text-container p {
+  font-size: 120%;
+}
+
+.text-container h1, h2 {
+  text-align: center;
+}
+
+.social-container {
+  text-align: center;
+}
+
+.portfolio-container .col-md-4 {
+  padding: 10px;
+}
+
+.portfolio-container div {
+  margin-bottom: 25px;
+}
+
+.btn {
+  margin: 3px 3px 3px 3px;
+  border-radius: 100%;
+}
+
+.fa {
+  font-size: 40px;
+}
+
+/* Tablets */
+@media (max-device-width: 1024px) {
+
+  #me {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 60%;
+  }
+
+}
+
+/* Smallest Devices */
+@media (max-device-width: 320px) {
+
+  #me {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 60%;
+  }
+
+  .text-container h1 {
+    font-size: 80px;
+    line-height: 90%;
+  }
+
+}
