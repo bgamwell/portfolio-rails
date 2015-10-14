@@ -1,0 +1,40 @@
+<div class="row">
+  <!-- Container for "about me" box -->
+  <div class="col-md-2 col-md-offset-2" id="about-me">
+    <p>
+      Brennan Gamwell
+    </p>
+  </div>
+
+  <!-- Margin column between about box and content -->
+  <div class="col-md-1" id="margin">
+  </div>
+
+  <!-- Container for all posts -->
+  <div class="col-md-5" id="content">
+
+    <% @posts.each do |post| %>
+
+      <div class="post">
+
+        <h1>
+          <%= post.title %>
+        </h1>
+
+        <p>
+          <%= post.date_published %> // originally published at
+        </p>
+
+        <%= post.synopsis %>
+
+      </div>
+
+    <% end %>
+
+  </div>
+
+  <div class="col-md-12" id="footer">
+    <!-- Put admin login information here -->
+  </div>
+
+</div>

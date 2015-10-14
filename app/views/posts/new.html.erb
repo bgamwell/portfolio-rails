@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    <h1>Upload a New Post</h1>
+    <br />
+
+    <%= bootstrap_form_for @post do |f| %>
+      <%= f.text_field :title, placeholder: "Title", autofocus: true %>
+      <%= f.text_field :author, placeholder: "Author" %>
+      <%= f.text_field :date_published, placeholder: "Date Published (Year Only)" %>
+      <%= f.text_field :URL, placeholder: "Article URL" %>
+      <%= f.text_field :source, placeholder: "Source" %>
+      <%= f.text_area :synopsis, placeholder: "Synopsis or Full Text" %>
+      <%= f.text_field :image, placeholder: "Image" %>
+      <%= f.submit "Submit" %>
+    <% end %>
+
+  </div>
+</div>

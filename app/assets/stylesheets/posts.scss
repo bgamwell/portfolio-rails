@@ -1,0 +1,23 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Prevent content from bumping against the top of the page
+body {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: 'Khula', sans-serif;
+}
+
+#margin {
+  // width: 30px;
+}
+
+#about-me {
+  // width: auto;
+  height: 400px;
+  padding: 20px;
+  // background-color: #63d16b;
+  border-radius: 5px;
+  border: 1px solid #787878;
+}
