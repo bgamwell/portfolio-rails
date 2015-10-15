@@ -43,14 +43,18 @@ li a {
   transition: background 0.1s linear;
 }
 
+li a:visited {
+	color: #fff;
+  text-decoration: none;
+}
+
 li:hover a {
 	background: #19c589;
   text-decoration: none;
 }
 
-li a:visited {
-	color: #fff;
-  text-decoration: none;
+.clicked {
+  background: #19c589;
 }
 
 #about-me {
@@ -118,11 +122,28 @@ a:hover {
   color: black;
 }
 
+.dev {
+  margin-bottom: 60px;
+}
+
+.dev p {
+  color: #777;
+  line-height: 24px;
+}
+
+.dev p:hover {
+  color: black;
+}
+
+.dev .fa {
+  font-size: 20px;
+}
+
 #footer {
   background-color: #777;
   position: fixed;
   bottom: 0;
-  height: 30px;
+  height: 40px;
   width: 100%;
   padding: 5px;
 
@@ -138,6 +159,9 @@ a:hover {
   background: #19c589;
 }
 
-#footer span {
+#footer p {
   font-size: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
 }

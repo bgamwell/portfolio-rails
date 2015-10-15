@@ -1,7 +1,7 @@
 <div id="navigation-bar">
   <ul>
     <li><a class="content-toggle" href="#">Content</a></li>
-    <li class="dev-toggle"><a href="#">Development</a></li>
+    <li><a class="dev-toggle" href="#">Development</a></li>
   </ul>
 </div>
 
@@ -85,8 +85,54 @@
   </div>
 
   <!-- Container for all dev portfolio projects -->
-  <div class="col-md-7 dev">
-    The dev section of the portfolio works!
+  <div class="col-md-7 dev hidden">
+
+    <h1>
+      Looking For Now
+      <a href="https://github.com/bgamwell/last-call-ionic" target="_blank" class="btn btn-social-icon btn-github" id="github-icon">
+        <i class="fa fa-github"></i>
+      </a>
+    </h1>
+    <p>
+      Looking For Now solves a problem everyone has: Where do I get a drink <em>right now</em>? This mobile-first app visualized bars in your area that are open right now--eliminating the need to open up heavier apps like Yelp or Google Maps and filter results.
+    </p>
+
+    <hr>
+
+    <h1>
+      Simplify Local
+      <a href="https://github.com/zoejf/simplify-local" target="_blank" class="btn btn-social-icon btn-github" id="github-icon">
+        <i class="fa fa-github"></i>
+      </a>
+    </h1>
+    <p>
+      Web application utilizing geo-location to allow users to discover and patronize small businesses in their current vicinity. One of six finalists in the MasterCard Masters of Code Hackathon: San Francisco. <a href="http://simplifylocal.herokuapp.com/" target="_blank">Live preview [...]</a>
+    </p>
+
+    <hr>
+
+    <h1>
+      Everest
+      <a href="https://github.com/bgamwell/everest_app" target="_blank" class="btn btn-social-icon btn-github" id="github-icon">
+        <i class="fa fa-github"></i>
+      </a>
+    </h1>
+    <p>
+      A web app where users can create a mapped route based on elevation and slope. Users can choose between different modes of transportation and measurement while also customizing their slope and elevation on the created route. This app allows users to save and edit their routes from a database while also sharing on social media. <a href="https://everest-app.herokuapp.com/" target="_blank">Live preview [...]</a>
+    </p>
+
+    <hr>
+
+    <h1>
+      Dayly
+      <a href="https://github.com/bgamwell/dayly-app" target="_blank" class="btn btn-social-icon btn-github" id="github-icon">
+        <i class="fa fa-github"></i>
+      </a>
+    </h1>
+    <p>
+      Dayly is an app that gets rid of the number one excuse behind not keeping a daily log or diary: time. Dayly challenges users to record their day's activities in 60 characters or fewer. <a href="https://dayly-app.herokuapp.com/" target="_blank">Live preview [...]</a>
+    </p>
+
   </div>
 
 </div>
@@ -98,8 +144,8 @@
 <!-- Footer -->
 <div id="footer">
   <% if current_user %>
-    <span class="pull-right"> Welcome, <%= current_user.email %>! | <%= link_to "Sign Out", logout_path %> </span>
+    <p> Welcome, <%= current_user.email %>! | <%= link_to "Sign Out", logout_path %> </p>
   <% else %>
-    <span class="pull-right"> <%= link_to "Admin Login", login_path %> </span>
+    <p>(c)2015 by Brennan Gamwell. Made with love in downtown San Francisco.</p>
   <% end %>
 </div>

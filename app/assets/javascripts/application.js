@@ -21,12 +21,16 @@ $(document).ready(function(){
 
   $('.content-toggle').click(function(){
     $('.content').removeClass('hidden');
-    $('dev').addClass('hidden');
+    $(this).addClass('clicked');
+    $('.dev').addClass('hidden');
+    $('.dev-toggle').removeClass('clicked');
   });
 
   $('.dev-toggle').click(function(){
     $('.dev').removeClass('hidden');
+    $(this).addClass('clicked');
     $('.content').addClass('hidden');
+    $('.content-toggle').removeClass('clicked');
   });
 
 });
