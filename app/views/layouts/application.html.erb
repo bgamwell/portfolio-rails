@@ -9,13 +9,14 @@
   <!-- Custom Google Font -->
   <link href='https://fonts.googleapis.com/css?family=Khula:300,400' rel='stylesheet' type='text/css'>
   <!-- Custom styles via asset pipeline -->
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
 </head>
 <body>
 
-    <%= yield %>
+  <%= yield %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
 </body>
 </html>

@@ -20,6 +20,7 @@ $(document).ready(function(){
   console.log('Javascript works!');
 
   $('.content-toggle').click(function(){
+    // window.location.href='/';
     $('.content').removeClass('hidden');
     $(this).addClass('clicked');
     $('.dev').addClass('hidden');
@@ -27,6 +28,7 @@ $(document).ready(function(){
   });
 
   $('.dev-toggle').click(function(){
+    // window.location.href='/';
     $('.dev').removeClass('hidden');
     $(this).addClass('clicked');
     $('.content').addClass('hidden');

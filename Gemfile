@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Gem to enable tags
+gem 'acts-as-taggable-on', '~> 3.4'
 # Gem for Heroku
 gem 'rails_12factor', group: :production
 # Bootstrap forms

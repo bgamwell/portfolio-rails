@@ -68,8 +68,14 @@
         </p>
 
         <p class="synopsis">
-          <%= post.synopsis %> <strong> <%= link_to "Read more [...]", post.URL, :target => "_blank"  %></strong>
+          <%= post.synopsis %> <strong> <%= link_to "Read more [...]", post.URL, :class => "read-more", :target => "_blank"  %></strong>
         </p>
+
+        <% if post.tag_list.length > 0 %>
+          <p>
+            <strong>Tags:&nbsp;&nbsp;</strong> <%=raw post.tag_list.map { |t| link_to t, tag_path(t), :class => "tag"}.join(' ') %>
+          </p>
+        <% end %>
 
       </div>
 

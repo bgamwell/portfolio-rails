@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+  get '/tags/:tag' => 'posts#index', as: :tag
+
 end
 
 # Prefix Verb   URI Pattern               Controller#Action

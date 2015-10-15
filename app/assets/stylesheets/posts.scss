@@ -165,3 +165,23 @@ a:hover {
   color: white;
   margin-top: 10px;
 }
+
+// Styles for tags
+
+.tag {
+  padding: 4px;
+  background-color: #777;
+  border-radius: 4px;
+  font-size: 10px;
+
+  // Fading animation
+  -webkit-transition: background 0.1s linear;
+  -moz-transition: background 0.1s linear;
+  -ms-transition: background 0.1s linear;
+  -o-transition: background 0.1s linear;
+  transition: background 0.1s linear;
+}
+
+.tag:hover {
+  background-color: #19c589;
+}

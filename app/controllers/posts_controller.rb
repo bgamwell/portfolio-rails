@@ -3,8 +3,11 @@ class PostsController < ApplicationController
   before_filter :authorize, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.order(date_published: :desc)
-    render :index
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).order(date_published: :desc)
+    else
+      @posts = Post.all.order(date_published: :desc)
+    end
   end
 
   def new
@@ -34,7 +37,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     # get updated data
-    updated_attributes = params.require(:post).permit(:title, :author, :date_published, :URL, :synopsis, :image, :source)
+    updated_attributes = params.require(:post).permit(:title, :author, :date_published, :URL, :synopsis, :image, :source, :tag_list)
     # update the creature
     @post.update_attributes(updated_attributes)
 
@@ -51,7 +54,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :author, :date_published, :URL, :synopsis, :image, :source)
+      params.require(:post).permit(:title, :author, :date_published, :URL, :synopsis, :image, :source, :tag_list)
     end
 
 end
