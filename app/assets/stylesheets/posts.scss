@@ -12,7 +12,7 @@ body {
 #navigation-bar {
   position: absolute;
   top: 5%;
-  left: 70%;
+  left: 60%;
 }
 
 ul {
@@ -55,6 +55,14 @@ li:hover a {
 
 .clicked {
   background: #19c589;
+}
+
+.home-button {
+  background: #19c589;
+}
+
+.home-button:hover {
+  background: #f4be38;
 }
 
 #about-me {
