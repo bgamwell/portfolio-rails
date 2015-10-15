@@ -1,40 +1,105 @@
-<div class="row">
-  <!-- Container for "about me" box -->
-  <div class="col-md-2 col-md-offset-2" id="about-me">
-    <p>
-      Brennan Gamwell
-    </p>
-  </div>
+<div id="navigation-bar">
+  <ul>
+    <li><a class="content-toggle" href="#">Content</a></li>
+    <li class="dev-toggle"><a href="#">Development</a></li>
+  </ul>
+</div>
 
-  <!-- Margin column between about box and content -->
-  <div class="col-md-1" id="margin">
-  </div>
+<!-- Left Margin -->
+<div class="col-md-1" id="left-margin">
+</div>
+
+<div class="col-md-2">
+</div>
+
+<!-- Container for "about me" box -->
+<div class="col-md-2" id="about-me">
+  <p class="name">
+    Brennan<br />
+    Gamwell
+  </p>
+  <p>
+    Web Developer & Senior<br />
+    Content Strategist
+  </p>
+  <p class="social-buttons">
+    <a href="https://www.github.com/bgamwell" target="_blank" class="btn btn-social-icon btn-github" id="github-icon">
+      <i class="fa fa-github"></i>
+    </a>
+    <a href="https://www.twitter.com/bgamwell" target="_blank" class="btn btn-social-icon btn-twitter" id="twitter-icon">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/brennangamwell" target="_blank" class="btn btn-social-icon btn-linkedin" id="linkedin-icon">
+      <i class="fa fa-linkedin"></i>
+    </a>
+  </p>
+  <p class="bio">
+    I'm an entrepreneurial full-stack web developer specializing in Javascript and Rails. I'm also a Senior Content Strategist.
+    <br />
+    <br />
+    I get excited about information accessibility, user-centric design, APIs, relational databases, data science - and the stories we can tell based on data.
+    <br />
+    <br />
+    <a href="https://github.com/bgamwell/portfolio-rails">
+      Oh, and yeah, I built this blog myself in Ruby on Rails. ;-)
+    </a>
+  </p>
+</div>
+
+<!-- Margin column between about box and content -->
+<div class="col-md-1" id="margin">
+</div>
+
+<div id="content-body">
 
   <!-- Container for all posts -->
-  <div class="col-md-5" id="content">
+  <div class="col-md-7 content">
 
     <% @posts.each do |post| %>
 
       <div class="post">
 
         <h1>
-          <%= post.title %>
+          <%= post.title %> <span class="source"> // <%= post.source %> </span>
         </h1>
 
         <p>
-          <%= post.date_published %> // originally published at
+          <span class="date-published"><%= post.date_published %></span>
         </p>
 
-        <%= post.synopsis %>
+        <p class="synopsis">
+          <%= post.synopsis %> <strong> <%= link_to "Read more [...]", post.URL, :target => "_blank"  %></strong>
+        </p>
 
       </div>
+
+      <% if current_user %>
+        <p class="btn btn-default edit"> <%= link_to "Edit", edit_post_path(post) %> </p>
+        <p class="btn btn-default delete"> <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure you'd like to delete this post?"} %> </p>
+      <% end %>
+
+      <hr>
 
     <% end %>
 
   </div>
 
-  <div class="col-md-12" id="footer">
-    <!-- Put admin login information here -->
+  <!-- Container for all dev portfolio projects -->
+  <div class="col-md-7 dev">
+    The dev section of the portfolio works!
   </div>
 
+</div>
+
+<!-- Right Margin -->
+<div class="col-md-1" id="right-margin">
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <% if current_user %>
+    <span class="pull-right"> Welcome, <%= current_user.email %>! | <%= link_to "Sign Out", logout_path %> </span>
+  <% else %>
+    <span class="pull-right"> <%= link_to "Admin Login", login_path %> </span>
+  <% end %>
 </div>

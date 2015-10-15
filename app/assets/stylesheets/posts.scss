@@ -4,20 +4,140 @@
 
 // Prevent content from bumping against the top of the page
 body {
-  margin-top: 100px;
+  margin-top: 125px;
   margin-bottom: 100px;
   font-family: 'Khula', sans-serif;
 }
 
-#margin {
-  // width: 30px;
+#navigation-bar {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+  float: left;
+  margin-right: 1px;
+}
+
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none;
+
+  // Fading animation
+  -webkit-transition: background 0.1s linear;
+  -moz-transition: background 0.1s linear;
+  -ms-transition: background 0.1s linear;
+  -o-transition: background 0.1s linear;
+  transition: background 0.1s linear;
+}
+
+li:hover a {
+	background: #19c589;
+  text-decoration: none;
+}
+
+li a:visited {
+	color: #fff;
+  text-decoration: none;
 }
 
 #about-me {
-  // width: auto;
-  height: 400px;
+  // width: 300px;
+  height: auto;
   padding: 20px;
   // background-color: #63d16b;
-  border-radius: 5px;
-  border: 1px solid #787878;
+  // border-right: 1px solid black;
+  position: fixed;
+  left: 180px;
+}
+
+.name {
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.social-buttons {
+  text-align: center;
+}
+
+.social-buttons .fa {
+  font-size: 25px;
+}
+
+.bio {
+  color: #777;
+}
+
+.bio:hover {
+  color: black;
+}
+
+.post {
+  margin-bottom: 60px;
+}
+
+.post p, .synopsis {
+  color: #777;
+  line-height: 24px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.date-published {
+  font-size: 20px;
+}
+
+.date-published:hover {
+  color: black;
+}
+
+.source {
+  color: #777;
+}
+
+.synopsis:hover {
+  color: black;
+}
+
+#footer {
+  background-color: #777;
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+
+  // Fading animation
+  -webkit-transition: background 0.1s linear;
+  -moz-transition: background 0.1s linear;
+  -ms-transition: background 0.1s linear;
+  -o-transition: background 0.1s linear;
+  transition: background 0.1s linear;
+}
+
+#footer:hover {
+  background: #19c589;
+}
+
+#footer span {
+  font-size: 10px;
 }

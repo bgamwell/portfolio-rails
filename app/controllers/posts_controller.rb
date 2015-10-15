@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :authorize, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(date_published: :desc)
     render :index
   end
 
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
       if @post.save
-        redirect_to post_path(@post)
+        redirect_to root_path
       end
   end
 
@@ -38,8 +38,8 @@ class PostsController < ApplicationController
     # update the creature
     @post.update_attributes(updated_attributes)
 
-    #redirect to show
-    redirect_to post_path(@post)
+    #redirect to root path
+    redirect_to root_path
   end
 
   def destroy

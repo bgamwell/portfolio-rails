@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- Custom Google Font -->
   <link href='https://fonts.googleapis.com/css?family=Khula:300,400' rel='stylesheet' type='text/css'>
-
   <!-- Custom styles via asset pipeline -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -16,13 +15,7 @@
 </head>
 <body>
 
-  <!-- prepare every page for bootstrap by specifying a container div -->
-  <div class="container">
-
     <%= yield %>
-
-  </div>
-
 
 </body>
 </html>
