@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Gem for Heroku
+gem 'rails_12factor', group: :production
 # Bootstrap forms
 gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
