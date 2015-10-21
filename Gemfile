@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-# Devise
-gem 'devise'
-# Active Admin
-gem 'activeadmin', github: 'activeadmin'
 # Gem to enable tags
 gem 'acts-as-taggable-on', '~> 3.4'
 # Gem for Heroku

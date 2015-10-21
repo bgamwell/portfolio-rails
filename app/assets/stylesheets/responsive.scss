@@ -1,0 +1,26 @@
+// Mobile CSS
+@media screen and (max-width: 1200px) {
+
+  body {
+    margin-top: 0;
+  }
+
+  #left-margin {
+    display: hidden;
+  }
+
+  #navigation-bar {
+    position: static;
+    margin-bottom: 5%;
+  }
+
+  ul li {
+    width: 100%;
+  }
+
+  #about-me {
+    position: static;
+    width: 100%;
+  }
+
+}
