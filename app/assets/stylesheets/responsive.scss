@@ -1,18 +1,28 @@
 // Mobile CSS
 @media screen and (max-width: 1200px) {
 
-  body {
+  html {
     font-size: 62.5%;
-    margin-top: 0;
   }
 
-  #left-margin {
-    display: hidden;
+  body  {
+    margin-top: 0;
+    font-size: 2em;
   }
+
+  // #left-margin {
+  //   display: hidden;
+  // }
 
   #navigation-bar {
     position: static;
+    top: 0;
     margin-bottom: 5%;
+  }
+
+  ul {
+    margin-left: 0;
+    padding: 0 0 0 0;
   }
 
   ul li {
@@ -23,8 +33,7 @@
   }
 
   li a {
-    font-size: 4em;
-    height: auto;
+    height: 10%;
   }
 
   #about-me {
