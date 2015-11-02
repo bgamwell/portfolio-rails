@@ -25,6 +25,12 @@ $(document).ready(function(){
     $(this).addClass('clicked');
     $('.dev').addClass('hidden');
     $('.dev-toggle').removeClass('clicked');
+
+    // tracking a click with Segment
+    analytics.track('Viewed Content', {
+      Viewed: 'Content'
+    });
+
   });
 
   $('.dev-toggle').click(function(){
@@ -33,6 +39,12 @@ $(document).ready(function(){
     $(this).addClass('clicked');
     $('.content').addClass('hidden');
     $('.content-toggle').removeClass('clicked');
+
+    // tracking a click with Segment
+    analytics.track('Viewed Dev', {
+      Viewed: 'Dev'
+    });
+
   });
 
 });
